@@ -70,7 +70,7 @@ const SignupScreen = ({navigation}) => {
         lastName: sanitizedLastName,
         email: sanitizedEmail,
         password: hashedPassword,
-        createdAt: firestore.FieldValue.serverTimestamp(),
+        createdAt: new Date().toISOString(),
       });
 
       Alert.alert('Success', 'User created successfully');
